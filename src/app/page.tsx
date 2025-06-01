@@ -1,11 +1,12 @@
+
 "use client";
 
 import AppLayout from "@/components/AppLayout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BarChart, LineChart, PieChart, AlertTriangle, CheckCircle, Shield, Clock } from "lucide-react";
+import { AlertTriangle, CheckCircle, Shield, Clock } from "lucide-react";
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent } from "@/components/ui/chart";
-import { Bar, Line, Pie, Cell, ResponsiveContainer, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip } from 'recharts';
+import { LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip } from 'recharts';
 import Image from 'next/image';
 
 const chartDataThreatsOverTime = [
@@ -93,17 +94,15 @@ export default function DashboardPage() {
             </CardHeader>
             <CardContent>
               <ChartContainer config={chartConfigThreatsOverTime} className="h-[300px] w-full">
-                <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={chartDataThreatsOverTime} margin={{ top: 5, right: 20, left: -10, bottom: 5 }}>
-                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                    <XAxis dataKey="month" tickLine={false} axisLine={false} dy={10} />
-                    <YAxis tickLine={false} axisLine={false} dx={-10}/>
-                    <RechartsTooltip content={<ChartTooltipContent indicator="line" />} />
-                    <ChartLegend content={<ChartLegendContent />} />
-                    <Line type="monotone" dataKey="threats" stroke="var(--color-threats)" strokeWidth={2} dot={false} />
-                    <Line type="monotone" dataKey="resolved" stroke="var(--color-resolved)" strokeWidth={2} dot={false} />
-                  </LineChart>
-                </ResponsiveContainer>
+                <LineChart data={chartDataThreatsOverTime} margin={{ top: 5, right: 20, left: -10, bottom: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                  <XAxis dataKey="month" tickLine={false} axisLine={false} dy={10} />
+                  <YAxis tickLine={false} axisLine={false} dx={-10}/>
+                  <RechartsTooltip content={<ChartTooltipContent indicator="line" />} />
+                  <ChartLegend content={<ChartLegendContent />} />
+                  <Line type="monotone" dataKey="threats" stroke="var(--color-threats)" strokeWidth={2} dot={false} />
+                  <Line type="monotone" dataKey="resolved" stroke="var(--color-resolved)" strokeWidth={2} dot={false} />
+                </LineChart>
               </ChartContainer>
             </CardContent>
           </Card>
@@ -115,17 +114,15 @@ export default function DashboardPage() {
             </CardHeader>
             <CardContent className="flex items-center justify-center">
               <ChartContainer config={chartConfigThreatTypes} className="h-[300px] w-full max-w-xs">
-                 <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <RechartsTooltip content={<ChartTooltipContent hideLabel />} />
-                      <Pie data={chartDataThreatTypes} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} labelLine={false} label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}>
-                        {chartDataThreatTypes.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={entry.fill} />
-                        ))}
-                      </Pie>
-                      <ChartLegend content={<ChartLegendContent nameKey="name" />} />
-                    </PieChart>
-                  </ResponsiveContainer>
+                <PieChart>
+                  <RechartsTooltip content={<ChartTooltipContent hideLabel />} />
+                  <Pie data={chartDataThreatTypes} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} labelLine={false} label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}>
+                    {chartDataThreatTypes.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={entry.fill} />
+                    ))}
+                  </Pie>
+                  <ChartLegend content={<ChartLegendContent nameKey="name" />} />
+                </PieChart>
               </ChartContainer>
             </CardContent>
           </Card>
@@ -186,3 +183,5 @@ export default function DashboardPage() {
     </AppLayout>
   );
 }
+
+    
