@@ -3,45 +3,48 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 200 17% 94%; /* Light Gray #ECEFF1 */
+    --foreground: 0 0% 3.9%; /* Dark Gray/Black */
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --primary: 231 48% 48%; /* Deep Blue #3F51B5 */
+    --primary-foreground: 0 0% 98%; /* White */
+    --secondary: 200 17% 88%; /* Darker Light Gray */
+    --secondary-foreground: 0 0% 9%; /* Dark Text */
+    --muted: 200 17% 85%; /* Muted Light Gray */
+    --muted-foreground: 0 0% 40%; /* Grayer Text */
+    --accent: 174 100% 29%; /* Teal #009688 */
+    --accent-foreground: 0 0% 98%; /* White */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --border: 200 17% 80%; /* Border Light Gray */
+    --input: 200 17% 80%; /* Input Border Light Gray */
+    --ring: 231 48% 48%; /* Primary Deep Blue for Rings */
+    --chart-1: 231 48% 48%; /* Primary */
+    --chart-2: 174 100% 29%; /* Accent */
+    --chart-3: 231 48% 65%; /* Lighter Primary */
+    --chart-4: 174 100% 45%; /* Lighter Accent */
+    --chart-5: 0 0% 50%; /* Medium Gray */
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Sidebar specific theme */
+    --sidebar-background: 231 48% 48%; /* Deep Blue */
+    --sidebar-foreground: 0 0% 98%; /* Almost White Text */
+    --sidebar-primary: 0 0% 98%; /* Active item background - Almost White */
+    --sidebar-primary-foreground: 231 48% 48%; /* Active item text - Deep Blue */
+    --sidebar-accent: 231 48% 58%; /* Hover item background - Lighter Deep Blue */
+    --sidebar-accent-foreground: 0 0% 98%; /* Hover item text - Almost White */
+    --sidebar-border: 231 48% 40%; /* Darker Deep Blue for borders */
+    --sidebar-ring: 174 100% 35%; /* Teal for focus rings in sidebar */
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -49,32 +52,34 @@ body {
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
+    --primary: 231 48% 55%; /* Lighter Deep Blue for dark mode */
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
+    --accent: 174 100% 35%; /* Darker Teal for dark mode */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --ring: 231 48% 55%; /* Lighter Deep Blue for Rings */
+    --chart-1: 231 48% 55%;
+    --chart-2: 174 100% 35%;
+    --chart-3: 231 48% 70%;
+    --chart-4: 174 100% 50%;
+    --chart-5: 0 0% 70%;
+
+    /* Dark Sidebar specific theme */
+    --sidebar-background: 231 48% 25%; /* Darker Deep Blue */
+    --sidebar-foreground: 0 0% 85%; /* Lighter Gray Text */
+    --sidebar-primary: 0 0% 15%; /* Active item background - Dark Gray */
+    --sidebar-primary-foreground: 231 48% 70%; /* Active item text - Light Deep Blue */
+    --sidebar-accent: 231 48% 35%; /* Hover item background - Medium Deep Blue */
+    --sidebar-accent-foreground: 0 0% 90%; /* Hover item text - Lighter Gray */
+    --sidebar-border: 231 48% 20%; /* Very Dark Deep Blue for borders */
+    --sidebar-ring: 174 100% 40%; /* Teal for focus rings in sidebar */
   }
 }
 
