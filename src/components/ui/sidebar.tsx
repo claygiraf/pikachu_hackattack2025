@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -397,10 +398,11 @@ SidebarSeparator.displayName = "SidebarSeparator"
 
 const SidebarContent = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<"div">
->(({ className, ...props }, ref) => {
+  React.ComponentProps<"div"> & { asChild?: boolean }
+>(({ className, asChild = false, ...props }, ref) => {
+  const Comp = asChild ? Slot : "div"
   return (
-    <div
+    <Comp
       ref={ref}
       data-sidebar="content"
       className={cn(
