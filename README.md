@@ -6,10 +6,9 @@
 - [🎯 Problem Statement](#-problem-statement)
 - [✨ Features](#-features)
 - [🧩 Architecture](#-architecture)
-- [🐳 Data Utilization](#-data-utilization)
+- [🐳 Data Utilization](#-data-utilization-&-ai)
 - [🐼Personalization Strategies](#-personalization-strategies)
 - [🏗️ Modules](#-modules)
-- [🧪 Key Technologies & AI](#-key-technologies-&-ai)
 - [🎥 Demo](#-demo)
 - [🚀 Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
@@ -82,7 +81,6 @@ Shield AI leverages Genkit and Google Gemini for its intelligent features:
     -   (Conceptual) Can generate comprehensive threat landscape briefings from provided data.
   
 
-```
 ## 🏗️ Modules
 
 | Module | Description |
@@ -114,13 +112,9 @@ Shield AI leverages Genkit and Google Gemini for its intelligent features:
 
 ## 🎥 Demo
 
-A short demo video is included to illustrate:
-- Voice interaction workflow
-- Intent recognition
-- Multilingual feedback
-- UI transitions & safety logic
+A short demo video to guide through Shield AI:
 
-[DAX Assistant Demo Team Pikachu (UM Hackathon 2025)](https://www.youtube.com/watch?v=h32cmeKhhBU)
+[shield ai_pikachu)](https://www.youtube.com/watch?v=h32cmeKhhBU)
 
 ## 🚀 Getting Started
 
