@@ -6,7 +6,7 @@
 - [🎯 Problem Statement](#-problem-statement)
 - [✨ Features](#-features)
 - [🧩 Architecture](#-architecture)
-- [🐳 Data Utilization & AI](#-data-utilization-ai)
+- [🐳 Data Utilization & AI](#-data-utilization--ai)
 - [🏗️ Modules](#-modules)
 - [🎥 Demo](#-demo)
 - [🚀 Getting Started](#-getting-started)
@@ -17,7 +17,7 @@
 - [📂 Directory Structure](#-directory-structure)
 - [🧠 Future Improvements](#-future-improvements)
 - [📸 Snapshots](#-snapshots)
-- [📚 Citations & References](#-citations--references)
+- [📚 References](#-references)
 
 
 ## 🧠 Overview
@@ -106,17 +106,12 @@ Shield AI leverages Genkit and Google Gemini for its intelligent features:
     -   Background: Light Gray (`#ECEFF1`)
     -   Accent: Teal (`#009688`)
 
-## 🧠 AI Intelligence
-
-- **Zero-Shot Intent Recognition** using `distilbert` (fallback)
-- **Multilingual Prompt Templates** for language-specific intent grounding
-- **Colloquial Slang & Accent Adaptability** (via LLM prompt tuning)
 
 ## 🎥 Demo
 
 A short demo video to guide through Shield AI:
 
-[(shieldai_pikachu)](https://www.youtube.com/watch?v=h32cmeKhhBU)
+[(shieldai_pikachu)](https:
 
 ## 🚀 Getting Started
 
@@ -209,9 +204,9 @@ Shield AI provides a clean, modern web interface for interacting with its cybers
 -   **Threat Logs**: Table-based view for managing historical incident logs.
 The UI uses a consistent theme based on deep blue, light gray, and teal, with a focus on clarity and ease of use.
 
-## 📚 Citations & References
+## 📚 References
 
-This project builds upon a wide array of open-source tools, models, and libraries. We gratefully acknowledge the following:
+This project builds upon a wide array of open-source tools, models, and libraries. 
 
 ---
 
