@@ -44,7 +44,7 @@ Modern cyber threats are increasing in volume and sophistication, often overwhel
 
 ## 🧩 Architecture  
 
-![Alt text](architecture-diagram.png)
+![Alt text](architecturediagram.png)
 Shield AI follows modern web application architecture:
 
 1.  **Frontend (User Interface)**:
