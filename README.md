@@ -201,6 +201,7 @@ Shield AI provides a clean, modern web interface for interacting with its cybers
 -   **Dashboard**: Overview of security posture with charts and key metrics.
   ![Alt text](02.png)
 -   **Data Lake**: Interface for inputting raw threat data and receiving AI-driven analysis.
+![Alt text](03.png)
 -   **Real-time Defense**: Page to review anomalies and get AI-suggested response plans.
 -   **Alert Configuration**: Forms to customize alert thresholds.
 -   **Threat Logs**: Table-based view for managing historical incident logs.
