@@ -42,7 +42,7 @@ Modern cyber threats are increasing in volume and sophistication, often overwhel
 - 📜 **Historical Threat Logs**: Maintains a manageable log of resolved and ongoing risks with notes, facilitating quick diagnosis for recurrences.
 
 
-## 🧩 Architecture
+## 🧩 Architecture  
 
 ![Alt text](architecture-diagram.png)
 Shield AI follows modern web application architecture:
