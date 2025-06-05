@@ -7,13 +7,13 @@
 - [✨ Features](#-features)
 - [🧩 Architecture](#-architecture)
 - [🐳 Data Utilization & AI](#-data-utilization--ai)
-- [🏗️ Modules](#-modules)
+- [🏗️ Modules](#modules)
 - [🎥 Demo](#-demo)
 - [🚀 Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
   - [Run the App](#run-the-app)
-- [🐲 Safety & Ethics](#safety--ethics)
+- [🐲 Safety & Ethics](#-safety--ethics)
 - [📂 Directory Structure](#-directory-structure)
 - [🧠 Future Improvements](#-future-improvements)
 - [📸 Snapshots](#-snapshots)
@@ -43,7 +43,7 @@ Modern cyber threats are increasing in volume and sophistication, often overwhel
 
 
 ## 🧩 Architecture
-
+![Alt text](architecture diagram.png)
 Shield AI follows modern web application architecture:
 
 1.  **Frontend (User Interface)**:
