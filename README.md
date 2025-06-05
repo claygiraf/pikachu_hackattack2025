@@ -13,7 +13,7 @@
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
   - [Run the App](#run-the-app)
-- [🛡️ Safety & Ethics](#-safety--ethics)
+- [🐲 Safety & Ethics](#safety--ethics)
 - [📂 Directory Structure](#-directory-structure)
 - [🧠 Future Improvements](#-future-improvements)
 - [📸 Snapshots](#-snapshots)
@@ -152,8 +152,9 @@ npm run dev
 The application should now be running, typically on `http://localhost:9002`.
 
 
-## 🛡️ Safety & Ethics
-- **AI as an Assistant**: AI-generated suggestions are intended for review and validation by security professionals, not as fully autonomous actions in the current prototype.
+## 🐲 Safety & Ethics
+
+- **AI as Assistant**: AI-generated suggestions are intended for review and validation by security professionals, not as fully autonomous actions in the current prototype.
 - **Data Security**: Focus on secure handling of sensitive data (though GDPR compliance is a future goal).
 - **User Control**: Users maintain control over configurations and final actions based on AI recommendations.
 
