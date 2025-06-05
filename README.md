@@ -211,9 +211,64 @@ This project builds upon a wide array of open-source tools, models, and librarie
 
 ---
 
-- **Gemma** – Google's lightweight LLM (via Ollama)
-  > Google. *Gemma: Lightweight Open Models for Responsible AI*. 2024.  
-  [arXiv:2403.10600](https://arxiv.org/abs/2403.10600)
+### 🧪 **Case Study 3: Enhancing Cybersecurity with Incremental Technologies**
+
+- **Quantum Sentinel** – GPT-based security alert/log analysis  
+  > KOSASIH. *Quantum Sentinel*.  
+  [GitHub Repository](https://github.com/KOSASIH/quantum-sentinel)
+
+- **RAG for Cybersecurity** – Retrieve + generate cybersecurity insights from documents  
+  > Santos Omar. *RAG for Cybersecurity Knowledge Retrieval*.  
+  [GitHub Repository](https://github.com/santosomar/RAG-for-cybersecurity)
+
+- **LLMFuzzer** – LLM-based fuzzer for vulnerability discovery  
+  > mnns. *LLMFuzzer: Fuzzing with LLMs*.  
+  [GitHub Repository](https://github.com/mnns/LLMFuzzer)
+
+---
+
+### 🎯 **AI-Enhanced Phishing Detection**
+
+- **AI-Enhanced Phishing Detection**  
+  > melisasvr. *AI-Enhanced Phishing Detection*.  
+  [GitHub Repository](https://github.com/melisasvr/AI-Enhanced-Phishing-Detection)
+
+- **AI Enhanced Phishing Detection**  
+  > nagasaigudiwada. *AI Enhanced Phishing Detection*.  
+  [GitHub Repository](https://github.com/nagasaigudiwada/AI_Enhanced_Phishing_Detection)
+
+- **Phishing URL Detector**  
+  > ajaymahar. *Phishing URL Detector*.  
+  [GitHub Repository](https://github.com/ajaymahar/phishing-url-detector)
+
+- **Phishing URL Detector**  
+  > AnshGoyal-Tech. *Phishing URL Detector*.  
+  [GitHub Repository](https://github.com/AnshGoyal-Tech/Phishing-URL-Detector)
+
+---
+
+### 📚 **Research: IoT Security & Anomaly Detection**
+
+- **Anomaly-Based Intrusion Detection for IoT**  
+  > rhish9h. *IoT Security – Anomaly-Based Intrusion Detection System*.  
+  [GitHub Repository](https://github.com/rhish9h/iot-security-anomaly-based-intrusion-detection-system)
+
+- **Research Paper: Intrusion Detection System Based on Anomaly**  
+  > sumododda. *Intrusion Detection System (Final Paper)*.  
+  [PDF](https://github.com/sumododda/Intrusion-Detection-System-based-on-anomaly/blob/main/fianl_cyber.pdf)
+
+---
+
+### 🛡️ **Cybersecurity Intrusion Detection**
+
+- **IDS-CICIDS2017** – Detecting suspicious activity, attacks, and malware using ML  
+  > mohitwildbeast. *IDS using CICIDS2017 Dataset*.  
+  [GitHub Repository](https://github.com/mohitwildbeast/IDS-CICIDS2017)
+
+- **Simple IDS** – A basic intrusion detection system  
+  > jashobeam. *Simple IDS*.  
+  [GitHub Repository](https://github.com/jashobeam/simple-ids)
+
 
 
 
