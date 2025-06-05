@@ -1,4 +1,4 @@
-# SHEILD AI
+# Shield AI🛡️
 
 ## 📚 Table of Contents
 
@@ -9,8 +9,7 @@
 - [🐳 Data Utilization](#-data-utilization)
 - [🐼Personalization Strategies](#-personalization-strategies)
 - [🏗️ Modules](#-modules)
-- [🧪 Key Technologies](#-key-technologies)
-- [🧠 AI Intelligence](#-ai-intelligence)
+- [🧪 Key Technologies & AI](#-key-technologies-&-ai)
 - [🎥 Demo](#-demo)
 - [🚀 Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
@@ -19,79 +18,70 @@
 - [🛡️ Safety & Ethics](#-safety--ethics)
 - [📂 Directory Structure](#-directory-structure)
 - [🧠 Future Improvements](#-future-improvements)
-- [🎍 Preliminary Judging](#preliminary-judging)
 - [📸 Snapshots](#-snapshots)
 - [📚 Citations & References](#-citations--references)
 
 
 ## 🧠 Overview
 
-This project is a **voice-controlled assistant prototype** designed for **Grab driver-partners (DAX)**, enabling **hands-free interactions** with the Grab platform. It empowers drivers with AI support in **noisy, real-world environments**, ensuring both **safety** and **productivity** on the road.
-
-Built for the **UMHackathon 2025**, this solution addresses the *"Economic Empowerment through AI"* theme by allowing DAX users to:
-- Navigate efficiently 🚗
-- Accept ride requests 🛎️
-- Chat with passengers 💬
-- Mark passengers as fetched ✅
-- Control these features via **voice commands** 🗣️
+Shield AI is an **AI-powered cybersecurity system prototype** designed to assist security analysts and IT teams. It enables **faster, more intelligent threat detection and response** through a user-friendly interface and AI-driven insights. This project aims to enhance security posture by leveraging Genkit and Large Language Models.
 
 ## 🎯 Problem Statement
 
-Drivers currently rely on manual input or screen-based interfaces, which are unsafe while driving. This assistant solves that by:
-- Supporting **voice-first interactions**
-- Functioning in **challenging audio conditions**
-- Adapting to **regional dialects, accents, and colloquialisms**
-- Delivering **real-time transcription and intent detection**
-- Providing **audio feedback** in local languages
+Modern cyber threats are increasing in volume and sophistication, often overwhelming security teams. Shield AI addresses this by:
+- Providing **AI-assisted analysis** of threat data.
+- Offering **intelligent response suggestions** for security incidents.
+- Centralizing threat information and logs for **efficient management**.
+- Reducing manual effort and time-to-response for security analysts.
 
 ## ✨ Features
 
-- 🔊 **Noise-Resilient Voice Recorder** with real-time VAD + noise suppression
-- 🧠 **Intent Prediction Engine** using language-detect + LLM (Gemma via Ollama)
-- 📣 **Multilingual Text-to-Speech (TTS)** with support for English, Malay, and Chinese
-- 🎨 Dual-theme GUI (Light & Dark modes)
-- 📱 Android-style GUI with stacked pages and custom buttons
-- 🔄 Context-aware navigation (back/home/intents)
+- 📊 **Interactive Dashboard**: Visualizes system status, active threats, security scores, and trends.
+- 💧 **Data Lake (Threat Intelligence Aggregation)**: Central hub for users to input and get AI-powered summaries, risk assessments, and recommendations from aggregated cybersecurity data.
+- 🤖 **Real-time Defense (AI-Powered)**: Enables review of detected anomalies and uses AI (Genkit flow) to generate comprehensive response strategies.
+- ⚙️ **Alert Configuration**: Allows users to define custom thresholds and settings for triggering security alerts.
+- 🛡️ **Data Protection**: Implements secure protocols for handling sensitive cybersecurity data. (Note: Not GDPR-compliant yet).
+- 📜 **Historical Threat Logs**: Maintains a manageable log of resolved and ongoing risks with notes, facilitating quick diagnosis for recurrences.
+
 
 ## 🧩 Architecture
-```
-Voice Input → [Noise Reduction + VAD] → Whisper Transcription →→
-Language Detection → LLM Intent Classification → → UI Navigation / Voice Feedback (Edge-TTS)
-```
 
-## 🐳 Data Utilization
-Current prototype does not yet implement data integration, however the team had implemented Large Language Models (LLMs) in a way to achieve data utilization for intelligent, real-time data usage.
+Shield AI follows a modern web application architecture:
 
-i. Real-Time Context Awareness  
-LLMs can interpret live trip data—such as ride status, location, and traffic patterns—to generate contextually smart responses. For example, Grab driver could say:
-```commandline
-“Are there any heavy traffic within 1km?”
-or
-“You’ve just accepted a ride. Want to open navigation now?”
-```
-ii. 📌 Dynamic Command Handling  
-As LLMs are flexible with natural language input, they can handle a wide variety of voice commands without needing pre-set phrases. Drivers can speak naturally with native tones, and the assistant will still understand based on context.
+1.  **Frontend (User Interface)**:
+    *   Built with Next.js (App Router), React, TypeScript.
+    *   Styled with ShadCN UI components and Tailwind CSS.
+    *   Hosted on Firebase App Hosting.
+    *   Key Pages: Dashboard, Data Lake, Real-time Defense, Alert Configuration, Threat Logs.
+2.  **Backend Logic (Next.js Server)**:
+    *   Utilizes Next.js Server Components and Server Actions for server-side rendering and data mutations.
+    *   Handles API requests from the frontend.
+3.  **AI Orchestration (Genkit)**:
+    *   Manages AI workflows defined in `src/ai/flows/`.
+    *   Interfaces with AI models for tasks like summarization and suggestion.
+4.  **AI Models (Google Gemini)**:
+    *   Leverages large language models for natural language understanding, text generation, and structured data output.
+5.  **Data Flow (Example: Data Lake Analysis)**:
+    *   User inputs data on Data Lake Page (UI) → Next.js Server Action → `summarizeThreatData` Genkit Flow → Google Gemini Model → Genkit Flow returns results → Next.js Server Action updates UI.
 
-iii. 📊 Driver Behavior Insights  
-LLMs can learn from historical driver behavior data to optimize workflow including predicting driver prefers to take breaks or proactively offering to toggle for instance Do Not Disturb when a ride starts.
+## 🐳 Data Utilization & AI
+Shield AI leverages Genkit and Google Gemini for its intelligent features:
 
-## 🐼Personalization Strategies
-By securely storing and referencing past driver conversations, it can offer deep personalization with LLMs in the loop—adapting responses and actions based on individual usage patterns.
+- **Threat Data Summarization (`summarizeThreatData` flow)**:
+    -   Processes aggregated cybersecurity data (logs, alerts).
+    -   Generates a concise summary.
+    -   Assesses the risk level (low, medium, high, critical).
+    -   Provides actionable recommendations.
+- **Response Suggestion (`suggestResponse` flow)**:
+    -   Takes details of a detected threat/anomaly as input.
+    -   Suggests a detailed remediation strategy.
+    -   Estimates the impact of the strategy.
+    -   Lists required resources.
+    -   Proposes a communication plan.
+- **Threat Briefing Generation (`generateThreatBriefing` flow)**:
+    -   (Conceptual) Can generate comprehensive threat landscape briefings from provided data.
+  
 
-i. Conversational Memory🗣️   
-With stored interactions, model can “remember” preferences over time:
-```commandline
-“You usually prefer Waze for navigation—opening it now.”
-or
-“Last time you muted the passenger chat while driving—should I do that again?”
-```
-ii. Tone and Style Adaptation📚  
-LLMs can fine-tune the assistant’s voice and tone to match the driver's style whether more casual, efficient or friendly—making the experience feel more natural and human-like.
-
-iii. Custom Workflow Shortcuts🛠️  
-By learning from past commands, it can offer personalized shortcuts or automations:
-```commandline
-“You often accept back-to-back rides want me to auto-accept the next one?”
 ```
 ## 🏗️ Modules
 
@@ -105,11 +95,16 @@ By learning from past commands, it can offer personalized shortcuts or automatio
 
 ## 🧪 Key Technologies
 
-- `PyQt5` – for GUI components
-- `webrtcvad`, `noisereduce`, `sounddevice` – for audio preprocessing
-- `whisper` – for transcription
-- `langdetect`, `langchain`, `Ollama` – for language & intent modeling
-- `pygame`, `edge-tts` – for multilingual TTS
+- **Frontend**: Next.js, React, TypeScript, ShadCN UI, Tailwind CSS, Recharts, Lucide React
+- **Backend/Server Logic**: Next.js (Server Actions, Server Components)
+- **AI Orchestration**: Genkit
+- **AI Models**: Google Gemini (via `@genkit-ai/googleai`)
+- **Hosting**: Firebase App Hosting
+- **Styling/UI**: Inter Font, Minimalist Icons (Lucide)
+- **Theme Colors**:
+    -   Primary: Deep Blue (`#3F51B5`)
+    -   Background: Light Gray (`#ECEFF1`)
+    -   Accent: Teal (`#009688`)
 
 ## 🧠 AI Intelligence
 
@@ -131,91 +126,92 @@ A short demo video is included to illustrate:
 
 ### Prerequisites
 
-- Python 3.9+
-- Ollama
+- Node.js (v18 or newer recommended)
+- npm or yarn
+- Firebase CLI (for deployment, optional for local dev)
 
 ### Setup
 
-download gemma3
-```commandline
-Ollama run gemma3:latest
-```
-Install Python Dependencies
-```commandline
-pip install -r srcs/requirements.txt
-```
+1.  **Clone the repository (if applicable) or use the Firebase Studio environment.**
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+    or
+    ```bash
+    yarn install
+    ```
+3.  **Environment Variables:**
+    *   Create a `.env` file in the root of the project.
+    *   Add any necessary environment variables, especially `GOOGLE_API_KEY` for Genkit to access Google AI Studio models:
+        ```env
+        GOOGLE_API_KEY=your_google_ai_studio_api_key
+        ```
+4.  **Initialize Genkit (if running locally for development without Firebase emulators for Genkit):**
+    *   Genkit flows are typically started with a development server. Check `package.json` for scripts like `genkit:dev` or `genkit:watch`.
+    *   Run in a separate terminal:
+        ```bash
+        npm run genkit:dev
 
 ### Run the App
 
 ```bash
-python srcs/main_app.py
+npm run dev
 ```
+The application should now be running, typically on `http://localhost:9002`.
+
 
 ## 🛡️ Safety & Ethics
-- Hands-free only: No visual distractions for drivers
-- Polite fallback prompts to clarify misheard commands
-- Avoids unsafe instructions by design
+- **AI as an Assistant**: AI-generated suggestions are intended for review and validation by security professionals, not as fully autonomous actions in the current prototype.
+- **Data Security**: Focus on secure handling of sensitive data (though GDPR compliance is a future goal).
+- **User Control**: Users maintain control over configurations and final actions based on AI recommendations.
 
 ## 📂 Directory Structure
 ```
-srcs
-├── main_app.py               # GUI logic
-├── audio_recorder.py         # Audio capture and VAD
-├── transcription.py          # Whisper-based STT
-├── intent_predictor.py       # LLM-based intent detection
-├── tts_engine.py             # Edge-TTS for feedback
-└── data/                     # Recorded audio + TTS outputs
+shield-ai/
+├── src/
+│   ├── app/                  # Next.js App Router: Pages and layouts
+│   │   ├── (page-name)/page.tsx # Individual page components
+│   │   ├── layout.tsx        # Root layout
+│   │   └── globals.css       # Global styles and ShadCN theme
+│   ├── components/           # Reusable React components
+│   │   ├── ui/               # ShadCN UI pre-built components
+│   │   └── AppLayout.tsx     # Main application shell/sidebar
+│   ├── ai/                   # Genkit AI related files
+│   │   ├── flows/            # Genkit flow definitions (e.g., summarize-threat-data.ts)
+│   │   ├── genkit.ts         # Genkit initialization
+│   │   └── dev.ts            # Genkit development server entry point
+│   ├── lib/                  # Utility functions (e.g., cn.ts)
+│   └── hooks/                # Custom React hooks (e.g., use-toast.ts)
+├── public/                   # Static assets
+├── .env                      # Environment variables (Gitignored)
+├── next.config.ts            # Next.js configuration
+├── tailwind.config.ts        # Tailwind CSS configuration
+├── tsconfig.json             # TypeScript configuration
+├── package.json              # Project dependencies and scripts
+└── README.md                 # This file
 ```
-
-## 🎍Preliminary Judging 
-Below is pikachu team pitch slide
-
-[Click here]
 
 
 ## 🧠 Future Improvements
 
-- Next-Level Noise Reduction with Krisp API
-
-- Switching to Locally trained Malaysian-Centric STT Model
-
-- Adding AI Memory for Context awareness and personalization
+-   Advanced automated response actions (with strict human oversight).
+-   Deeper integration with SIEM/SOAR tools.
+-   Achieve GDPR compliance for data handling.
+-   More sophisticated and customizable data visualizations.
+-   Enhanced AI memory for contextual understanding across sessions.
+-   Support for more data sources and automated ingestion.
 
 ## 📸 Snapshots
 
-### 🟢 Normal Mode – Home Dashboard
-Voice mode is off, and the driver can interact with the interface using buttons.
 
-![normal mode](snapshots%2Fimg.png)
-
-### 🎤 Voice Mode Activated
-The app switches to dark theme when voice mode is active to signal listening state.
-
-![voice mode](snapshots%2Fimg_1.png)
-
-### 🧪 Example Voice Interactions
-
-🧠 The assistant supports multilingual commands (English, Chinese, Malay) and can understand colloquial instructions, returning relevant actions with natural voice feedback.
-
-```commandline
-Transcribed [recorded_audio_1.wav]: Can you navigate me to the closest hospital?
-[Edge-TTS] Speaking in en: Okay, navigating you to the closest hospital. Just one moment…
-(Slight pause – simulating map lookup)
-Okay, the closest hospital is Pusat Perubatan Universiti Malaya, approximately 5 kilometers away. I’m sending the route to your navigation system now.
-Predicted intent: navigation
-```
-```
-Transcribed [recorded_audio_1.wav]: 跟乘客讲模要到了就要到快点出来等
-[Edge-TTS] Speaking in zh-cn: 好的，明白。
-“好的，我来帮您跟乘客沟通。您说‘模要到了就要到快点出来等’，我来代替您说：‘乘客，请您尽快出来等待。’ 稍后我会提醒您注意安全。”
-Predicted intent: chat_passenger
-```
-```
-Transcribed [recorded_audio_2.wav]: 翻回主界面
-[Edge-TTS] Speaking in cn: 好的，没问题。
-“好的，正在返回主界面。”
-Predicted intent: back
-```
+Shield AI provides a clean, modern web interface for interacting with its cybersecurity features. Key views include:
+-   **Dashboard**: Overview of security posture with charts and key metrics.
+-   **Data Lake**: Interface for inputting raw threat data and receiving AI-driven analysis.
+-   **Real-time Defense**: Page to review anomalies and get AI-suggested response plans.
+-   **Alert Configuration**: Forms to customize alert thresholds.
+-   **Threat Logs**: Table-based view for managing historical incident logs.
+The UI uses a consistent theme based on deep blue, light gray, and teal, with a focus on clarity and ease of use.
 
 ## 📚 Citations & References
 
@@ -227,48 +223,7 @@ This project builds upon a wide array of open-source tools, models, and librarie
   > Google. *Gemma: Lightweight Open Models for Responsible AI*. 2024.  
   [arXiv:2403.10600](https://arxiv.org/abs/2403.10600)
 
-- **Whisper** – Multilingual Speech Recognition by OpenAI  
-  > Radford et al. *Robust Speech Recognition via Large-Scale Weak Supervision*. 2022.  
-  [arXiv:2212.04356](https://arxiv.org/abs/2212.04356)
 
-- **DistilBERT** – Transformer for fallback zero-shot classification  
-  > Sanh, V., Debut, L., Chaumond, J., Wolf, T. *DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter*. 2019.  
-  [arXiv:1910.01108](https://arxiv.org/abs/1910.01108)
 
-- **LangChain** – LLM orchestration framework  
-  > Harrison Chase et al. *LangChain: Building Applications with LLMs through Composability*. 2023.  
-  [https://github.com/langchain-ai/langchain](https://github.com/langchain-ai/langchain)
-
-- **LangDetect**  
-  > Nakatani, Shuyo. *Language Detection Library for Java (ported to Python)*. 2010.  
-  [https://github.com/Mimino666/langdetect](https://github.com/Mimino666/langdetect)
-
-- **PyQt5** – Qt GUI framework for Python  
-  > Riverbank Computing. *PyQt Documentation*.  
-  [https://www.riverbankcomputing.com/software/pyqt/intro](https://www.riverbankcomputing.com/software/pyqt/intro)
-
-- **WebRTC VAD**  
-  > Google WebRTC. *Voice Activity Detection (VAD)*.  
-  [https://webrtc.org](https://webrtc.org)
-
-- **noisereduce**  
-  > Tim Sainburg. *Noise reduction using spectral gating*. 2020.  
-  [GitHub](https://github.com/timsainb/noisereduce)
-
-- **SoundDevice**  
-  > Matthias Geier. *python-sounddevice: PortAudio bindings for Python*.  
-  [https://python-sounddevice.readthedocs.io](https://python-sounddevice.readthedocs.io)
-
-- **Edge-TTS**  
-  > Uses Microsoft Edge Neural Voices via unofficial API  
-  [GitHub](https://github.com/rany2/edge-tts)
-
-- **Pygame**  
-  > Pygame Community. *Pygame – Python Game Development*.  
-  [https://www.pygame.org](https://www.pygame.org)
-
-- **SciPy & NumPy**  
-  > Virtanen, P. et al. *SciPy 1.0: Fundamental Algorithms for Scientific Computing in Python*. 2020.  
-  [Nature Methods, 17, 261–272](https://www.nature.com/articles/s41592-019-0686-2)
 
 ---
