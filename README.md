@@ -6,8 +6,7 @@
 - [🎯 Problem Statement](#-problem-statement)
 - [✨ Features](#-features)
 - [🧩 Architecture](#-architecture)
-- [🐳 Data Utilization](#-data-utilization-&-ai)
-- [🐼Personalization Strategies](#-personalization-strategies)
+- [🐳 Data Utilization & AI](#-data-utilization-&-ai)
 - [🏗️ Modules](#-modules)
 - [🎥 Demo](#-demo)
 - [🚀 Getting Started](#-getting-started)
@@ -45,7 +44,7 @@ Modern cyber threats are increasing in volume and sophistication, often overwhel
 
 ## 🧩 Architecture
 
-Shield AI follows a modern web application architecture:
+Shield AI follows modern web application architecture:
 
 1.  **Frontend (User Interface)**:
     *   Built with Next.js (App Router), React, TypeScript.
@@ -114,7 +113,7 @@ Shield AI leverages Genkit and Google Gemini for its intelligent features:
 
 A short demo video to guide through Shield AI:
 
-[shield ai_pikachu)](https://www.youtube.com/watch?v=h32cmeKhhBU)
+[(shieldai_pikachu)](https://www.youtube.com/watch?v=h32cmeKhhBU)
 
 ## 🚀 Getting Started
 
