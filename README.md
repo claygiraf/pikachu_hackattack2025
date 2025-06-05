@@ -6,7 +6,7 @@
 - [🎯 Problem Statement](#-problem-statement)
 - [✨ Features](#-features)
 - [🧩 Architecture](#-architecture)
-- [🐳 Data Utilization & AI](#-data-utilization-&-ai)
+- [🐳 Data Utilization & AI](#-data-utilization-ai)
 - [🏗️ Modules](#-modules)
 - [🎥 Demo](#-demo)
 - [🚀 Getting Started](#-getting-started)
@@ -82,13 +82,16 @@ Shield AI leverages Genkit and Google Gemini for its intelligent features:
 
 ## 🏗️ Modules
 
-| Module | Description |
-|--------|-------------|
-| `audio_recorder.py` | Handles voice activity detection, noise reduction, and WAV recording |
-| `transcription.py` | Uses OpenAI Whisper for speech-to-text |
-| `intent_predictor.py` | LLM-based intent classification with multilingual prompt support |
-| `tts_engine.py` | Uses Edge TTS for responsive speech synthesis |
-| `main_app.py` | PyQt5 GUI with interactive pages and theme switching |
+| Component/Module                 | Description                                                                    |
+|----------------------------------|--------------------------------------------------------------------------------|
+| `src/app/(pages)/page.tsx`       | Individual page components for UI (Dashboard, Data Lake, etc.)                 |
+| `src/components/AppLayout.tsx`   | Main application shell, sidebar navigation, and overall page structure.          |
+| `src/ai/genkit.ts`               | Initializes and configures the Genkit AI framework with necessary plugins.     |
+| `src/ai/flows/*.ts`              | Defines specific AI-powered workflows (e.g., summarizing data, suggesting responses). Each flow orchestrates calls to LLMs with defined inputs/outputs. |
+| `src/app/globals.css`            | Defines the global styling and ShadCN UI theme variables for the application.  |
+| `next.config.ts`                 | Configuration file for the Next.js framework.                                  |
+| `package.json`                   | Lists project dependencies and defines scripts for running/building the app.   |
+
 
 ## 🧪 Key Technologies
 
