@@ -1,4 +1,4 @@
-# Shield AI🛡️HI
+# Shield AI🛡️
 
 ## 📚 Table of Contents
 
