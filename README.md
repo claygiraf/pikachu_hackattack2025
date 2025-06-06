@@ -246,7 +246,8 @@ This project builds upon a wide array of open-source tools, models, and librarie
 
 - **Phishing URL Detector**  
   > AnshGoyal-Tech. *Phishing URL Detector*.  
-  [GitHub Repository](https://github.com/AnshGoyal-Tech/Phishing-URL-Detector)
+  [GitHub Repository])
+  > (https://github.com/AnshGoyal-Tech/Phishing-URL-Detector
 
 ---
 
